@@ -17,7 +17,7 @@ const DisplayIngredient = ( props ) => {
                 <ol>
                {    
                    Object.entries(ingredients.ingredients).map(ingredient => {
-                    console.log(ingredient)
+
                     return (
                         <li key={Math.random()}>  {ingredient[1].text}</li>
                     )
@@ -33,4 +33,4 @@ const DisplayIngredient = ( props ) => {
    
 }
 
-export default DisplayIngredient;
+export default React.memo(DisplayIngredient);

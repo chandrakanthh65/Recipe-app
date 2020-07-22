@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './Display.module.css';
 import {Link} from 'react-router-dom';
 
-export default function Display({ title, healthLabels, image, ingredients }) {
+ const Display = ({ title, healthLabels, image, ingredients }) => {
 
   const recipeData = { title, healthLabels, image, ingredients };
 
@@ -27,3 +27,5 @@ export default function Display({ title, healthLabels, image, ingredients }) {
         </div>
     );
 }
+
+export default React.memo(Display);
