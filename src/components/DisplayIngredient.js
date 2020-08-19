@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 const DisplayIngredient = ( props ) => {
 
+    console.log(props)
     const ingredients = props.location.recipeData ;
     let check;
     ingredients? check=1: check=0;
@@ -33,4 +34,4 @@ const DisplayIngredient = ( props ) => {
    
 }
 
-export default React.memo(DisplayIngredient);
+export default DisplayIngredient;

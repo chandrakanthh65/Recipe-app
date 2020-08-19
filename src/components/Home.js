@@ -3,13 +3,12 @@ import Display from './Display';
 import styles from './Home.module.css';
 import ClipLoader from "react-spinners/ClipLoader";
 
- const Home = () => {
+const Home = ({searchFor, setSearchForFunction}) => {
+
 const ApiId = '5835f7d6';
 const ApiKey = '4eff08e584d30f3ac406cf1b600fd0e2';
-
 const [recipes, setRecipes] = useState([]);
 const [search, setSearch] = useState('');
-const [searchFor, setSearchFor] = useState('k');
 const [load, setLoad] = useState(true);
 const [isAvailable, setisAvailable] = useState(true);
  
@@ -37,7 +36,7 @@ const handleChange = e =>{
 
 const handleSubmit = e =>{
     e.preventDefault();
-    setSearchFor(search);
+    setSearchForFunction(search);
 }
 
 
@@ -53,4 +52,4 @@ const handleSubmit = e =>{
     )
 }
 
-export default React.memo(Home);
+export default Home;

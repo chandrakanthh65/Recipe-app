@@ -17,15 +17,13 @@ import {Link} from 'react-router-dom';
                  <ul key={Math.random()}>
                      <li >{healthLabel} </li>
                  </ul>
-
             ))}
             </div>
-
+            
             </div>
             <Link to={{pathname: '/DisplayIngredient', recipeData}} className={styles.myButton}>Get ingredients</Link>
-
-        </div>
+            </div>
     );
 }
 
-export default React.memo(Display);
+export default Display;
